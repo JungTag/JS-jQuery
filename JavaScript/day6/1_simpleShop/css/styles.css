@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 992px;
+  font-family: "Helvetica";
+}
+
+a {
+  text-decoration: none;
+}
+/* navbar */
+.navbar {
+  padding: 0px 15px 0px 30px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
+  height: 60px;
+}
+
+#logo {
+  float: left;
+  position: relative; /* 부모 요소인 navbar의 영향을 받게 된다. */
+  top: 50%; /* navbar 높이의 50%에 해당하는 부분에 '요소의 위 끝부분'이 맞춰지게 된다. */
+  transform: translate(0%, -50%); /* 지정된 요소를 Y축으로 -50%만큼 위치이동시킨다. */
+  height: 20px;
+}
+
+#logo>img {
+  height: inherit;
+}
+
+ul{
+  float: right;
+  margin: 0px;
+  padding-left: 0px;
+  height: 100%;
+}
+
+li{
+  float: left;
+  list-style: none;
+  padding: 0px 15px;
+  height: inherit;
+}
+
+ul a{
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  text-decoration: none;
+  font: bold 13px Helvetica;
+  color: black;
+}
+
+/* hero header */
+.hero-header {
+  background-image: url("../images/hero_header.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+  text-align: center;
+}
+
+/* products */
+.products{
+  margin: 0px auto 0px;
+  text-align: center;
+}
+
+.products>p{
+  padding: 60px 0px 60px;
+  font: bold 24px Helvetica;
+  color: #545454;
+}
+
+.items{
+  margin: 0px auto 0px;
+}
+
+.items>div{
+  /* 각각의 라인들자손에 float가 적용되면 height가 0이 되는 문제를 해결하기 위해 */
+  display: inline-block;
+  margin-bottom: 80px;
+}
+
+/* 각각의 상품(a태그로 둘러쌓여져 있음) */
+div>a{ 
+  float: left;
+}
+
+.item{
+  margin: 0px 10px 0px;
+}
+
+.item img{
+  width: 225px;
+  height: 225px;
+  margin-bottom: 20px;
+}
+
+p{
+  font: 16px Helvetica;
+  margin: 0px;
+  color: #7B7B7B;
+}
+
+p:nth-child(2){
+  margin-bottom: 4px;
+}
+
+/* footer */
+.footer{
+  margin: 40px auto 80px;
+}
+
+.sns{
+  margin: 0px auto 0px;
+  text-align: center;
+}
+
+.sns>img{
+  height: 20px;
+}
+
+.sns>img:nth-child(2){
+  margin: 0px 20px 0px;
+}
