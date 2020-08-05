@@ -1,0 +1,23 @@
+div{
+    text-align: center;
+}
+.logo{
+    margin-top: 80px;
+}
+#logo_img{
+    width: 165px;
+    height: 58px;
+}
+.menu{
+    margin: 60px 0px;
+}
+#home, #seoul, #tokyo, #paris{
+    margin: 0px 10px;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #58595B;
+}
+#image{
+    width: 90%;
+}
