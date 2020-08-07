@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+.blue {
+  background-color: #5aaeff;
+}
+
+.purple {
+  background-color: #cb6cff;
+}
+
+.yellow {
+  background-color: #ffe400;
+}
