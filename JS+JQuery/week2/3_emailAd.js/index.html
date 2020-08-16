@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Consulting Market</title>
+  <meta charset="utf-8" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero-header">
+    <div class="navbar">
+      <a href="#" id="logo">
+        <img src="images/logo.png" width="230">
+      </a>
+
+      <ul class="menu menu-left">
+        <li><a href="#">PRODUCTS</a></li>
+        <li><a href="#">BLOG</a></li>
+      </ul>
+
+      <ul class="menu menu-right">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">LOGIN</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <h2>더 많은 <b>정보와 이벤트</b> 등을<br> 받아보고 싶으면 <b>이메일을 입력해주세요!</b></h2>
+
+        <input id="email-input" type="email" placeholder="이메일">
+        <input id="submit-btn" type="submit" value="Send">
+      </div>
+
+      <img id="main-img" src="images/desk.png" width="400">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+    const input = document.querySelector("#email-input");
+    const sendBtn = document.querySelector("#submit-btn");
+
+    function updateValue(event) {
+      const inputValue = input.value;
+      if (inputValue.indexOf('@') !== -1) { // value에 '@'가 있는가?
+        const index = inputValue.indexOf('@'); 
+        const subStr = inputValue.substring(index + 1); // '@' 이하의 문자열 생성
+        if (subStr.indexOf('.') !== -1) { // subStr에 '.'이 있는가?
+          sendBtn.style.backgroundColor = "#4D79C2";
+        }
+        else {
+          sendBtn.style.backgroundColor = "#9E9E9E";
+        }
+      }
+      else {
+        sendBtn.style.backgroundColor = "#9E9E9E";
+      }
+    }
+
+    function init() {
+      input.addEventListener("input", updateValue); // input에 변화가 있을 때는 "input"이벤트
+    }
+
+    init();
+  </script>
+</body>
+
+</html>
